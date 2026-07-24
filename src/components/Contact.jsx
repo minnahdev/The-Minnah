@@ -83,7 +83,7 @@ export default function Contact() {
       `Hello Minnah,\n\nName: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     );
     const mailtoUrl = `mailto:minnahameenullah@gmail.com?subject=${subjectLine}&body=${bodyContent}`;
-    
+
     // Redirect browser to open mail client
     window.location.href = mailtoUrl;
 
@@ -103,7 +103,7 @@ export default function Contact() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-        
+
         {/* Left Column: Coordinates & Social links (lg:col-span-5) */}
         <div className="lg:col-span-5 space-y-8 font-mono text-xs text-zinc-400">
           <div>
@@ -111,15 +111,15 @@ export default function Contact() {
               Let's Build Something Together.
             </h3>
             <p className="font-sans text-sm text-zinc-400 leading-relaxed max-w-sm">
-              Reach out for freelance projects, open-source collaborations, community lectures, or technical events. 
+              Reach out for freelance projects, open-source collaborations, community lectures, or technical events.
               Let's craft the next digital product.
             </p>
           </div>
 
           <div className="space-y-4">
             {/* Email link */}
-            <a 
-              href="mailto:minnahameenullah@gmail.com"
+            <a
+              href="https://mailto:minnahameenullah@gmail.com"
               className="flex items-center space-x-3 bg-[#111113] border border-[#27272A] hover:border-accent p-4 rounded-lg text-white font-medium group transition-all duration-300"
             >
               <Mail className="w-5 h-5 text-accent" />
@@ -130,7 +130,7 @@ export default function Contact() {
             </a>
 
             {/* Phone link */}
-            <a 
+            <a
               href="tel:+919207750076"
               className="flex items-center space-x-3 bg-[#111113] border border-[#27272A] hover:border-accent p-4 rounded-lg text-white font-medium group transition-all duration-300"
             >
@@ -142,7 +142,7 @@ export default function Contact() {
             </a>
 
             {/* WhatsApp Link */}
-            <a 
+            <a
               href="https://wa.me/919207750076"
               target="_blank"
               rel="noreferrer"
@@ -183,7 +183,7 @@ export default function Contact() {
         {/* Right Column: Contact form (lg:col-span-7) */}
         <div className="lg:col-span-7 bg-[#111113] border border-[#27272A] rounded-lg p-6 md:p-8">
           {status === 'success' ? (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               className="py-12 flex flex-col items-center text-center space-y-4 font-sans"
@@ -195,7 +195,7 @@ export default function Contact() {
               <p className="text-zinc-400 text-sm max-w-sm leading-relaxed">
                 Thank you! Your message has been compiled successfully. (Redirecting to your mail client fallback to complete sending if environment keys aren't set).
               </p>
-              <button 
+              <button
                 onClick={() => setStatus('idle')}
                 className="mt-4 px-4 py-2 border border-zinc-800 hover:border-accent text-zinc-400 hover:text-accent rounded font-mono text-xs transition-colors"
               >
@@ -204,7 +204,7 @@ export default function Contact() {
             </motion.div>
           ) : (
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-6 font-mono text-xs">
-              
+
               {/* Row 1: Name and Email */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
