@@ -117,13 +117,6 @@ export default function Contact() {
           </div>
 
           <div className="space-y-4">
-            {/* Email link */}
-            <a
-              href="mailto:minnahameenullah@gmail.com?subject=Portfolio%20Inquiry"
-              className="text-white"
-            >
-              CLICK ME
-            </a>
 
             {/* Phone link */}
             <a
