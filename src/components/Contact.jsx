@@ -55,6 +55,12 @@ export default function Contact() {
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
+    console.log({
+      serviceId,
+      templateId,
+      publicKey,
+    });
+
     // Check if EmailJS credentials are fully defined
     if (serviceId && templateId && publicKey) {
       emailjs.sendForm(serviceId, templateId, formRef.current, publicKey)
