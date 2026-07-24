@@ -20,6 +20,7 @@ const missions = [
     solution: "Designed and engineered an IoT-enabled hardware module that mounts to a bicycle frame, sending real-time coordinates and motion alerts to a responsive web dashboard. Integrates crowdsourced route hazard reporting.",
     tech: ["React", "Flask", "Firebase", "Leaflet API", "Python", "IoT Sensors"],
     github: "https://github.com/minnahdev/cycora",
+    live: "https://kalyanir2807-blip.github.io/tink-her-hack-temp/#login",
 
   },
   {
@@ -162,7 +163,7 @@ export default function Missions() {
 
                 {/* Details Sections */}
                 <div className="space-y-6 text-zinc-300 font-sans text-sm">
-                  
+
                   {/* Overview */}
                   <div className="space-y-2">
                     <div className="flex items-center space-x-2 text-zinc-500 font-mono text-xs uppercase tracking-wider">
@@ -233,6 +234,17 @@ export default function Missions() {
                     </span>
                   )}
 
+                  {/* Live Demo — only shown when a link exists */}
+                  {selectedMission.live && (
+                    <a
+                      href={selectedMission.live}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center space-x-2 bg-accent/10 border border-accent hover:bg-accent hover:text-black text-accent px-4 py-2.5 rounded transition-all duration-200 border-glow-accent"
+                    >
+                      <span>LAUNCH_LIVE_DEMO</span>
+                    </a>
+                  )}
 
                 </div>
               </motion.div>
