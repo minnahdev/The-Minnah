@@ -5,11 +5,11 @@ const capabilities = [
   { name: "Leadership", level: 9, category: "Core" },
   { name: "Problem Solving", level: 9, category: "Engineering" },
   { name: "Communication", level: 8, category: "Core" },
-  { name: "Public Speaking", level: 8, category: "Core" },
-  { name: "Teaching", level: 9, category: "Education" },
+  { name: "Public Speaking", level: 9, category: "Core" },
+  { name: "Teaching", level: 8, category: "Education" },
   { name: "UI/UX Design", level: 7, category: "Design" },
-  { name: "Frontend Development", level: 8, category: "Engineering" },
-  { name: "Backend Development", level: 7, category: "Engineering" },
+  { name: "Frontend Development", level: 7, category: "Engineering" },
+  { name: "Backend Development", level: 8, category: "Engineering" },
   { name: "Community Building", level: 9, category: "Core" },
   { name: "Continuous Learning", level: 10, category: "Core" }
 ];
@@ -55,16 +55,15 @@ export default function Capabilities() {
                     initial={{ scaleX: 0 }}
                     whileInView={{ scaleX: 1 }}
                     viewport={{ once: true }}
-                    transition={{ 
-                      duration: 0.3, 
+                    transition={{
+                      duration: 0.3,
                       delay: (idx * 0.05) + (segmentIdx * 0.03),
                       ease: "easeOut"
                     }}
-                    className={`h-full flex-1 rounded-sm origin-left ${
-                      isActive 
-                        ? 'bg-accent/80 group-hover:bg-accent transition-colors duration-300' 
-                        : 'bg-zinc-800/40'
-                    } ${isActive && segmentIdx === cap.level - 1 ? 'glow-accent' : ''}`}
+                    className={`h-full flex-1 rounded-sm origin-left ${isActive
+                      ? 'bg-accent/80 group-hover:bg-accent transition-colors duration-300'
+                      : 'bg-zinc-800/40'
+                      } ${isActive && segmentIdx === cap.level - 1 ? 'glow-accent' : ''}`}
                   />
                 );
               })}

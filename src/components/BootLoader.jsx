@@ -5,7 +5,7 @@ const bootLogs = [
   { text: "Initializing system...", delay: 0 },
   { text: "Loading visual assets & texture layers...", delay: 150 },
   { text: "Authenticating security key: minnahdev...", delay: 300 },
-  { text: "Verifying CEAL academic achievements...", delay: 450 },
+  { text: "Verifying Personal Credentials...", delay: 450 },
   { text: "Preparing dossier console interface...", delay: 600 },
   { text: "Access Granted. Welcome, Agent Minnah.", delay: 750, isHighlight: true }
 ];
@@ -67,7 +67,7 @@ export default function BootLoader({ onComplete }) {
             </motion.div>
           ))}
         </AnimatePresence>
-        
+
         {/* Blinking Cursor at the end */}
         <div className="flex items-center text-accent/80 pl-6 h-6">
           <span className={`w-2 h-4 bg-accent ${showCursor ? 'opacity-100' : 'opacity-0'}`} />

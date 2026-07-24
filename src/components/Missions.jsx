@@ -55,7 +55,7 @@ const missions = [
     problem: "Urban planners lack accessible, real-time geospatial intelligence. NASA's rich open datasets on land surface temperature, moisture, and atmospheric conditions remain siloed from practical city development tools.",
     solution: "Built an interactive city planning dashboard that ingests NASA terrestrial, humidity, and weather API streams to visualize risk zones, green cover indices, and climate impact patterns — helping city developers plan infrastructure with environmental intelligence. Won Local Winner at NASA Space Apps Challenge, CEAL.",
     tech: ["React", "Three.js", "Tailwind CSS", "NASA Open APIs", "Framer Motion"],
-    github: "https://github.com/minnahdev/nasa-space-apps-2025",
+    github: "https://github.com/Ash-JP/MRNASA",
 
   }
 ];
