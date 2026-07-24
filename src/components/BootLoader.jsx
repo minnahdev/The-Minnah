@@ -3,11 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const bootLogs = [
   { text: "Initializing system...", delay: 0 },
-  { text: "Loading visual assets & texture layers...", delay: 400 },
-  { text: "Authenticating security key: minnahdev...", delay: 800 },
-  { text: "Verifying CEAL academic achievements...", delay: 1200 },
-  { text: "Preparing dossier console interface...", delay: 1600 },
-  { text: "Access Granted. Welcome, Agent Minnah.", delay: 2000, isHighlight: true }
+  { text: "Loading visual assets & texture layers...", delay: 150 },
+  { text: "Authenticating security key: minnahdev...", delay: 300 },
+  { text: "Verifying CEAL academic achievements...", delay: 450 },
+  { text: "Preparing dossier console interface...", delay: 600 },
+  { text: "Access Granted. Welcome, Agent Minnah.", delay: 750, isHighlight: true }
 ];
 
 export default function BootLoader({ onComplete }) {
@@ -25,12 +25,12 @@ export default function BootLoader({ onComplete }) {
     // Blinking cursor
     const cursorInterval = setInterval(() => {
       setShowCursor((prev) => !prev);
-    }, 450);
+    }, 200);
 
-    // Call onComplete after 2500ms + some fade buffer
+    // Call onComplete after 750ms + some fade buffer
     const completeTimeout = setTimeout(() => {
       onComplete();
-    }, 2800);
+    }, 1100);
 
     return () => {
       clearInterval(cursorInterval);

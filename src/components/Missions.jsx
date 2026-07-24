@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Target, Cpu, FileText, ExternalLink, X, Calendar } from 'lucide-react';
+import { Target, Cpu, FileText, X, Calendar } from 'lucide-react';
 
 const GithubIcon = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -20,7 +20,7 @@ const missions = [
     solution: "Designed and engineered an IoT-enabled hardware module that mounts to a bicycle frame, sending real-time coordinates and motion alerts to a responsive web dashboard. Integrates crowdsourced route hazard reporting.",
     tech: ["React", "Flask", "Firebase", "Leaflet API", "Python", "IoT Sensors"],
     github: "https://github.com/minnahdev/cycora",
-    live: null // No live link, fallback mailto or pending
+
   },
   {
     id: "nutriscan",
@@ -32,7 +32,7 @@ const missions = [
     solution: "Built a web app that captures label photos, processes them using OCR engines, parses the text against medical allergen profiles, and instantly alerts the user to dangerous ingredients.",
     tech: ["React", "Python", "Flask", "OpenCV", "Tesseract OCR", "Tailwind CSS"],
     github: "https://github.com/minnahdev/nutriscan",
-    live: "https://github.com/minnahdev/nutriscan" // Let's link demo to github code or deployment
+
   },
   {
     id: "signalless",
@@ -44,7 +44,7 @@ const missions = [
     solution: "Developed a system that analyzes live camera feeds at intersections, detects vehicles in real-time, estimates congestion density, and dynamically adjusts light timing to clear lanes efficiently.",
     tech: ["Python", "OpenCV", "Flask", "React", "Tailwind CSS", "NumPy"],
     github: "https://github.com/minnahdev/signalless",
-    live: null
+
   },
   {
     id: "nasa-apps",
@@ -56,7 +56,7 @@ const missions = [
     solution: "Designed a 3D Earth dashboard tracking global thermal shifts, air quality indices, and deforestation vectors using NASA API streams, securing the Local Winner award at CEAL.",
     tech: ["React", "Three.js", "Tailwind CSS", "NASA Open APIs", "Framer Motion"],
     github: "https://github.com/minnahdev/nasa-space-apps-2025",
-    live: "https://github.com/minnahdev/nasa-space-apps-2025"
+
   }
 ];
 
@@ -227,18 +227,7 @@ export default function Missions() {
                     <span>GET_SOURCE_CODE</span>
                   </a>
 
-                  {/* Live Demo */}
-                  {selectedMission.live && (
-                    <a
-                      href={selectedMission.live}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center space-x-2 bg-accent/10 border border-accent hover:bg-accent hover:text-black text-accent px-4 py-2.5 rounded transition-all duration-200 border-glow-accent"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      <span>LAUNCH_LIVE_DEMO</span>
-                    </a>
-                  )}
+
                 </div>
               </motion.div>
             </div>
