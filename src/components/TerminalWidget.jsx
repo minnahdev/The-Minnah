@@ -42,6 +42,8 @@ export default function TerminalWidget({ isOpen, onClose }) {
           { type: 'output', text: '  github     - Launch Minnah\'s GitHub in a new tab' },
           { type: 'output', text: '  linkedin   - Launch Minnah\'s LinkedIn in a new tab' },
           { type: 'output', text: '  contact    - Navigate to Contact Information' },
+          { type: 'output', text: '  capabilities - Navigate to Capabilities' },
+          { type: 'output', text: '  communities - Navigate to Communities' },
           { type: 'output', text: '  clear      - Reset console history' }
         ]);
         break;
@@ -73,6 +75,32 @@ export default function TerminalWidget({ isOpen, onClose }) {
 
       case 'clear':
         setHistory([]);
+        break;
+
+      case 'capabilities':
+        setHistory([...newHistory, { type: 'output', text: 'Navigating to Capabilities...' }]);
+        setTimeout(() => scrollToSection('capabilities'), 300);
+        break;
+
+      case 'communities':
+        setHistory([...newHistory, { type: 'output', text: 'Navigating to Communities...' }]);
+        setTimeout(() => scrollToSection('communities'), 300);
+        break;
+
+      case 'coffee':
+        setHistory([...newHistory, { type: 'output', text: 'Error 418 \n coffee levels critically low.\nRecommend immediate caffeine deployment.' }]);
+        break;
+
+      case 'meme':
+        setHistory([...newHistory, { type: 'output', text: 'Bro, you\'re not using this for work, are you?' }]);
+        break;
+
+      case 'easteregg':
+        setHistory([...newHistory, { type: 'output', text: 'Idk what to add here tho lol' }]);
+        break;
+
+      case 'joke':
+        setHistory([...newHistory, { type: 'output', text: 'Indian Government' }]);
         break;
 
       default:
@@ -110,7 +138,7 @@ export default function TerminalWidget({ isOpen, onClose }) {
   return (
     <div className="fixed bottom-6 right-6 z-50 w-full max-w-lg mx-auto md:mx-0 px-4 md:px-0">
       <div className="bg-black/95 border border-[#27272A] rounded-lg shadow-2xl overflow-hidden glow-accent flex flex-col h-[320px] font-mono text-xs md:text-sm text-accent">
-        
+
         {/* Terminal Header */}
         <div className="bg-[#111113] border-b border-[#27272A] px-4 py-2.5 flex items-center justify-between">
           <div className="flex items-center space-x-2">
@@ -119,15 +147,15 @@ export default function TerminalWidget({ isOpen, onClose }) {
               MINNAH_DOSSIER_CLI // v1.0.4
             </span>
           </div>
-          
+
           <div className="flex items-center space-x-2">
-            <button 
+            <button
               onClick={() => setHistory([])}
               className="text-zinc-500 hover:text-zinc-300 px-1 text-[10px] uppercase font-mono"
             >
               [Clear]
             </button>
-            <button 
+            <button
               onClick={onClose}
               className="text-zinc-500 hover:text-red-500 font-bold px-1"
             >
@@ -137,7 +165,7 @@ export default function TerminalWidget({ isOpen, onClose }) {
         </div>
 
         {/* Terminal History */}
-        <div 
+        <div
           className="flex-1 p-4 overflow-y-auto space-y-2 select-text font-mono-jetbrains"
           onClick={() => inputRef.current && inputRef.current.focus()}
         >
@@ -167,7 +195,7 @@ export default function TerminalWidget({ isOpen, onClose }) {
         </div>
 
         {/* Terminal Input Form */}
-        <form 
+        <form
           onSubmit={handleCommandSubmit}
           className="bg-black border-t border-[#27272A] px-4 py-2.5 flex items-center"
         >
