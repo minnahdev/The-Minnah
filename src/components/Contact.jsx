@@ -127,6 +127,14 @@ export default function Contact() {
               className="flex items-center space-x-3 bg-[#111113] border border-[#27272A] hover:border-accent p-4 rounded-lg text-white font-medium group transition-all duration-300"
             ></a>
 
+            <a
+              href="https://google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Test Link
+            </a>
+
             {/* Phone link */}
             <a
               href="tel:+919207750076"
