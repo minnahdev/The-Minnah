@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MessageSquare, Send, CheckCircle, AlertTriangle } from 'lucide-react';
 import emailjs from '@emailjs/browser';
+import { TypeAnimation } from "react-type-animation";
 
 const GithubIcon = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -181,18 +182,30 @@ export default function Contact() {
               animate={{ opacity: 1, scale: 1 }}
               className="py-12 flex flex-col items-center text-center space-y-4 font-sans"
             >
-              <CheckCircle className="w-12 h-12 text-accent text-glow-accent" />
-              <h3 className="font-display font-bold text-white text-lg uppercase tracking-wider">
-                TRANSMISSION ESTABLISHED
+              <div className="font-mono text-accent text-5xl animate-pulse">
+                {'>>'}
+              </div>
+              <h3 className="font-display font-bold text-white text-xl uppercase tracking-widest">
+                ✔ SECURE TRANSMISSION COMPLETE
               </h3>
-              <p className="text-zinc-400 text-sm max-w-sm leading-relaxed">
-                Thank you! Your message has been compiled successfully. (Redirecting to your mail client fallback to complete sending if environment keys aren't set).
-              </p>
+              <div className="font-mono text-left text-sm text-zinc-400 leading-7 max-w-md border border-zinc-800 bg-black/40 rounded-lg p-5">
+                <p className="text-accent">[✓] Message encrypted</p>
+                <p className="text-accent">[✓] Secure tunnel established</p>
+                <p className="text-accent">[✓] Payload delivered</p>
+
+                <div className="border-t border-zinc-800 my-4"></div>
+
+                <p className="text-white">
+                  Thank you for your message.
+                  <br />
+                  I'll review it and get back to you as soon as possible.
+                </p>
+              </div>
               <button
                 onClick={() => setStatus('idle')}
                 className="mt-4 px-4 py-2 border border-zinc-800 hover:border-accent text-zinc-400 hover:text-accent rounded font-mono text-xs transition-colors"
               >
-                COMPILE_NEW_TRANSMISSION
+                NEW TRANSMISSION
               </button>
             </motion.div>
           ) : (
