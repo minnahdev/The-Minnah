@@ -189,13 +189,13 @@ export default function Contact() {
                   sequence={[
                     `////////////////////////////////////////////////
 
-                    TRANSMISSION STATUS
+                  TRANSMISSION STATUS
 
-                    [✓] Encryption Complete
-                    [✓] Secure Tunnel Established
-                    [✓] Payload Delivered
+                  [✓] Encryption Complete
+                  [✓] Secure Tunnel Established
+                  [✓] Payload Delivered
 
-                    Awaiting Response...
+                  Awaiting Response...
 
                     ////////////////////////////////////////////////`
                   ]}
