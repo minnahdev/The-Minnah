@@ -24,20 +24,26 @@ const timelineEntries = [
   {
     role: "Joint Secretary",
     organization: "IEEE Women in Engineering (WIE) SB CEAL",
-    period: "2024 - 2025",
+    period: "2026 - Ongoing",
     details: "Directed female student recruitment, organized engineering workshops, and coordinated networking summits for women in technology under IEEE SB CEAL."
   },
   {
     role: "Operations Team Member",
     organization: "Alchemy IEDC CEAL",
-    period: "2023 - 2024",
+    period: "2026 - Ongoing",
     details: "Coordinated entrepreneurship events, hackathons, and incubation drives. Worked closely with founders to foster startup culture in Attingal."
   },
   {
     role: "Volunteer",
     organization: "TinkerHub CEAL",
-    period: "2023 - Present",
+    period: "2026 - Present",
     details: "Mentored peers in beginner programming courses (Python, HTML/CSS). Assisted in organizing peer-learning circles and tech talks."
+  },
+  {
+    role: "Volunteer",
+    organization: "ISTE CEAL",
+    period: "2025 - 2026",
+    details: "Contributed to technical events, workshops, and student development programs organised under the ISTE student chapter at CEAL."
   }
 ];
 
