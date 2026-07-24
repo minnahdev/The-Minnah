@@ -88,7 +88,7 @@ export default function TerminalWidget({ isOpen, onClose }) {
         break;
 
       case 'coffee':
-        setHistory([...newHistory, { type: 'output', text: 'Error 418 \n coffee levels critically low.\nRecommend immediate caffeine deployment.' }]);
+        setHistory([...newHistory, { type: 'output', text: 'Error 418 \ncoffee levels critically low.\nRecommend immediate caffeine deployment.' }]);
         break;
 
       case 'meme':
