@@ -180,33 +180,49 @@ export default function Contact() {
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="py-12 flex flex-col items-center text-center space-y-4 font-sans"
+              transition={{ duration: 0.4 }}
+              className="py-10 flex justify-center"
             >
-              <div className="font-mono text-accent text-5xl animate-pulse">
-                {'>>'}
-              </div>
-              <h3 className="font-display font-bold text-white text-xl uppercase tracking-widest">
-                ✔ SECURE TRANSMISSION COMPLETE
-              </h3>
-              <div className="font-mono text-left text-sm text-zinc-400 leading-7 max-w-md border border-zinc-800 bg-black/40 rounded-lg p-5">
-                <p className="text-accent">[✓] Message encrypted</p>
-                <p className="text-accent">[✓] Secure tunnel established</p>
-                <p className="text-accent">[✓] Payload delivered</p>
+              <div className="w-full max-w-xl rounded-lg border border-accent/30 bg-[#09090B] p-6">
 
-                <div className="border-t border-zinc-800 my-4"></div>
+                <TypeAnimation
+                  sequence={[
+                    `////////////////////////////////////////////////
 
-                <p className="text-white">
-                  Thank you for your message.
-                  <br />
-                  I'll review it and get back to you as soon as possible.
-                </p>
+                    TRANSMISSION STATUS
+
+                    [✓] Encryption Complete
+                    [✓] Secure Tunnel Established
+                    [✓] Payload Delivered
+
+                    Awaiting Response...
+
+                    ////////////////////////////////////////////////`
+                  ]}
+                  wrapper="pre"
+                  speed={80}
+                  cursor={true}
+                  className="font-mono text-sm leading-7 whitespace-pre-wrap text-zinc-300"
+                />
+
+                <div className="border-t border-zinc-800 mt-6 pt-6">
+                  <p className="text-white text-sm">
+                    Your message has been securely delivered.
+                  </p>
+
+                  <p className="text-zinc-500 text-sm mt-2">
+                    I'll review your enquiry and get back to you as soon as possible.
+                  </p>
+                </div>
+
+                <button
+                  onClick={() => setStatus('idle')}
+                  className="mt-8 w-full border border-accent text-accent hover:bg-accent hover:text-black rounded-md py-3 font-mono uppercase tracking-widest transition-all duration-300"
+                >
+                  NEW TRANSMISSION
+                </button>
+
               </div>
-              <button
-                onClick={() => setStatus('idle')}
-                className="mt-4 px-4 py-2 border border-zinc-800 hover:border-accent text-zinc-400 hover:text-accent rounded font-mono text-xs transition-colors"
-              >
-                NEW TRANSMISSION
-              </button>
             </motion.div>
           ) : (
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-6 font-mono text-xs">
