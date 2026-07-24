@@ -31,29 +31,28 @@ const missions = [
     problem: "People with dietary constraints, allergies, or chronic health issues face difficulties decoding micro-printed, complex scientific chemical names on food packaging labels.",
     solution: "Built a web app that captures label photos, processes them using OCR engines, parses the text against medical allergen profiles, and instantly alerts the user to dangerous ingredients.",
     tech: ["React", "Python", "Flask", "OpenCV", "Tesseract OCR", "Tailwind CSS"],
-    github: "https://github.com/minnahdev/nutriscan",
+    github: "https://github.com/minnahdev/Team3-Nutriscan",
 
   },
   {
     id: "signalless",
     name: "Mission: SignalLess",
-    type: "SMART CITIES & AI",
+    type: "SAFETY & CONNECTIVITY",
     date: "Q1 2026",
-    overview: "An AI-powered computer-vision traffic controller that calculates intersection queue lengths to optimize traffic light schedules.",
-    problem: "Traditional fixed-duration traffic lights cause massive vehicle idling, fuel waste, and traffic congestion by giving green signals to empty lanes.",
-    solution: "Developed a system that analyzes live camera feeds at intersections, detects vehicles in real-time, estimates congestion density, and dynamically adjusts light timing to clear lanes efficiently.",
-    tech: ["Python", "OpenCV", "Flask", "React", "Tailwind CSS", "NumPy"],
-    github: "https://github.com/minnahdev/signalless",
+    overview: "A Bluetooth-based personal distress signal sender designed to broadcast emergency alerts to nearby devices without internet connectivity.",
+    problem: "In remote areas, emergencies, or situations with no cellular coverage, individuals have no reliable way to send a distress signal or call for help from nearby people.",
+    solution: "Conceptualized a low-cost wearable device that uses Bluetooth Low Energy (BLE) to broadcast encrypted SOS signals to nearby smartphones, triggering alert notifications even without internet access.",
+    tech: ["Bluetooth LE", "Embedded C", "React Native", "Firebase"],
 
   },
   {
     id: "nasa-apps",
     name: "Mission: NASA Space Apps",
-    type: "DATA VISUALIZATION / WINNER",
+    type: "CITY PLANNING / WINNER",
     date: "Q4 2025",
-    overview: "Interactive environmental hazard dashboard visualizing Earth's vital signs and surface shifts using NASA satellite telemetry.",
-    problem: "NASA's open earth datasets are complex, distributed in raw tables, and difficult for researchers, environmentalists, and the public to interpret.",
-    solution: "Designed a 3D Earth dashboard tracking global thermal shifts, air quality indices, and deforestation vectors using NASA API streams, securing the Local Winner award at CEAL.",
+    overview: "A data-driven city planning tool that leverages NASA satellite data — terrestrial, humidity, and weather datasets — to assist urban planners in making smarter infrastructure decisions.",
+    problem: "Urban planners lack accessible, real-time geospatial intelligence. NASA's rich open datasets on land surface temperature, moisture, and atmospheric conditions remain siloed from practical city development tools.",
+    solution: "Built an interactive city planning dashboard that ingests NASA terrestrial, humidity, and weather API streams to visualize risk zones, green cover indices, and climate impact patterns — helping city developers plan infrastructure with environmental intelligence. Won Local Winner at NASA Space Apps Challenge, CEAL.",
     tech: ["React", "Three.js", "Tailwind CSS", "NASA Open APIs", "Framer Motion"],
     github: "https://github.com/minnahdev/nasa-space-apps-2025",
 
@@ -216,16 +215,23 @@ export default function Missions() {
 
                 {/* Action Buttons */}
                 <div className="mt-8 pt-6 border-t border-zinc-900 flex flex-wrap gap-4 font-mono">
-                  {/* GitHub Repo */}
-                  <a
-                    href={selectedMission.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center space-x-2 bg-zinc-900 border border-zinc-850 hover:border-white text-white px-4 py-2.5 rounded transition-all duration-200"
-                  >
-                    <GithubIcon className="w-4 h-4" />
-                    <span>GET_SOURCE_CODE</span>
-                  </a>
+                  {/* GitHub Repo — only shown when a link exists */}
+                  {selectedMission.github ? (
+                    <a
+                      href={selectedMission.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center space-x-2 bg-zinc-900 border border-zinc-800 hover:border-white text-white px-4 py-2.5 rounded transition-all duration-200"
+                    >
+                      <GithubIcon className="w-4 h-4" />
+                      <span>GET_SOURCE_CODE</span>
+                    </a>
+                  ) : (
+                    <span className="flex items-center space-x-2 border border-zinc-800 text-zinc-600 px-4 py-2.5 rounded font-mono text-xs">
+                      <span className="w-1.5 h-1.5 bg-zinc-600 rounded-full" />
+                      <span>CONCEPT_STAGE — NO_REPO_YET</span>
+                    </span>
+                  )}
 
 
                 </div>
