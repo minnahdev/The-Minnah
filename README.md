@@ -6,7 +6,7 @@ An interactive, premium Character Profile and Developer Dossier portfolio for Mi
 
 🌐 **GitHub Repository**: [https://github.com/minnahdev/The-Minnah](https://github.com/minnahdev/The-Minnah)
 
-🌐 **Live Website**: [https://minnahdev.github.io/The-Minnah](https://minnahdev.github.io/The-Minnah) *(or custom deployment)*
+🌐 **Live Website**: [https://the-minnah.vercel.app/](https://the-minnah.vercel.app/) *(or custom deployment)*
 
 ---
 
