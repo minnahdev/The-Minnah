@@ -7,14 +7,19 @@
     scroll-behavior: smooth;
     font-family: 'Inter', sans-serif;
   }
-  
+
   body {
     background-color: #09090B;
     color: #FFFFFF;
     font-family: 'Inter', sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Space Grotesk', sans-serif;
   }
 
@@ -45,7 +50,7 @@
 /* Background Grids & Textures */
 .bg-grid-subtle {
   background-size: 50px 50px;
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(39, 39, 42, 0.15) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(39, 39, 42, 0.15) 1px, transparent 1px);
 }
@@ -55,10 +60,8 @@
 }
 
 .scanlines-overlay {
-  background: linear-gradient(
-    rgba(18, 16, 16, 0) 50%, 
-    rgba(0, 0, 0, 0.15) 50%
-  );
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%,
+      rgba(0, 0, 0, 0.15) 50%);
   background-size: 100% 4px;
 }
 
@@ -86,4 +89,18 @@ input::-webkit-inner-spin-button {
 /* Custom easing class */
 .transition-custom {
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+/* Terminal typing cursor */
+.type-cursor {
+  color: #00FF88;
+  font-weight: bold;
+  animation: blinkCursor 1s steps(2, start) infinite;
+}
+
+@keyframes blinkCursor {
+  50% {
+    opacity: 0;
+  }
 }
