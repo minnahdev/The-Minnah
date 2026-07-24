@@ -119,20 +119,13 @@ export default function Contact() {
           <div className="space-y-4">
             {/* Email link */}
             <a
-              href={`mailto:minnahameenullah@gmail.com?subject=${encodeURIComponent(
-                "Project Inquiry"
-              )}&body=${encodeURIComponent(
-                "Hi Minnah,\n\nI found your portfolio and would like to discuss..."
-              )}`}
-              className="flex items-center space-x-3 bg-[#111113] border border-[#27272A] hover:border-accent p-4 rounded-lg text-white font-medium group transition-all duration-300"
-            ></a>
-
-            <a
-              href="https://google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Test Link
+              href="mailto:minnahameenullah@gmail.com"
+              className="flex items-center space-x-3 bg-[#111113] border border-[#27272A] hover:border-accent p-4 rounded-lg text-white font-medium group transition-all duration-300">
+              <Mail className="w-5 h-5 text-accent" />
+              <div>
+                <div className="text-[10px] text-zinc-500 font-semibold uppercase tracking-wider">EMAIL_PORT</div>
+                <div className="text-xs font-mono select-all">minnahameenullah@gmail.com</div>
+              </div>
             </a>
 
             {/* Phone link */}
