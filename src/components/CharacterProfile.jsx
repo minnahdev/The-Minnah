@@ -8,7 +8,7 @@ export default function CharacterProfile() {
     { label: "INSTITUTION", value: "College of Engineering Attingal (CEAL), Kerala" },
     { label: "SPECIALIZATION", value: "Computer Science & Engineering" },
     { label: "STATUS", value: "Available for Freelance, Collaborations and Opportunities", isStatus: true },
-    { label: "CURRENT FOCUS", value: "Software Engineering, Frontend Architectures & Community Building" }
+    { label: "CURRENT FOCUS", value: "Software Engineering, Web Development ,Community Building & Skill Development" }
   ];
 
   return (
@@ -23,9 +23,9 @@ export default function CharacterProfile() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-        
+
         {/* Left Column: Dossier Metadata (lg:col-span-7) */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -77,7 +77,7 @@ export default function CharacterProfile() {
         </motion.div>
 
         {/* Right Column: Mission Statement + Avatar (lg:col-span-5) */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -87,9 +87,9 @@ export default function CharacterProfile() {
           {/* Avatar Card */}
           <div className="bg-[#111113] border border-[#27272A] rounded-lg p-6 flex items-center space-x-6 relative overflow-hidden group">
             <div className="w-24 h-24 rounded border border-zinc-800 overflow-hidden bg-black flex-shrink-0 relative">
-              <img 
-                src="/avatar.jpg" 
-                alt="Minnah Pattar Kadavan Avatar" 
+              <img
+                src="/avatar.jpg"
+                alt="Minnah Pattar Kadavan Avatar"
                 className="w-full h-full object-cover grayscale brightness-90 contrast-110 group-hover:scale-105 transition-transform duration-500"
                 onError={(e) => {
                   e.target.onerror = null;
@@ -99,7 +99,7 @@ export default function CharacterProfile() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             </div>
-            
+
             <div>
               <div className="flex items-center space-x-1.5 text-xs text-accent font-mono mb-1">
                 <Sparkles className="w-3.5 h-3.5" />
@@ -124,9 +124,9 @@ export default function CharacterProfile() {
                 </h4>
               </div>
               <p className="text-zinc-300 text-sm md:text-base leading-relaxed italic">
-                "My mission is to build highly functional, elegant, and useful software that solves actual, 
-                everyday challenges. As an engineer, my goal is to constantly expand my technical boundaries, 
-                nurture open learning communities through leadership and teaching, and eventually design 
+                "My mission is to build highly functional, elegant, and useful software that solves actual,
+                everyday challenges. As an engineer, my goal is to constantly expand my technical boundaries,
+                nurture open learning communities through leadership and teaching, and eventually design
                 scalable digital products and startups that drive social progress."
               </p>
             </div>
