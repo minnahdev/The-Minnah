@@ -13,7 +13,7 @@ const timelineEntries = [
     role: "Media & Tech Lead",
     organization: "Wisdom Girls Organisation",
     period: "2024 - Present",
-    details: "Managing digital operations, leading tech outreach programs, and structuring visual brand identities. Spearheaded digital skill workshops for young girls."
+    details: "Managing digital operations, leading tech outreach programs, and structuring visual brand identitiesin Zonal level. Spearheaded digital skill workshops for young girls."
   },
   {
     role: "Vengara Zonal Secretary",
@@ -73,18 +73,18 @@ export default function MissionLog() {
             {/* Timeline Dot */}
             <span className="absolute -left-[31px] md:-left-[39px] top-1.5 flex h-4 w-4 items-center justify-center">
               <span className="absolute h-2.5 w-2.5 rounded-full bg-[#09090B] border-2 border-zinc-600 group-hover:border-accent transition-colors duration-300" />
-              <motion.span 
+              <motion.span
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.1 + 0.2 }}
-                className="absolute h-2 w-2 rounded-full bg-accent glow-accent" 
+                className="absolute h-2 w-2 rounded-full bg-accent glow-accent"
               />
             </span>
 
             {/* Timeline Content card */}
             <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
-              
+
               {/* Date Column (md:col-span-3) */}
               <div className="md:col-span-3 md:-ml-36 font-mono text-xs text-zinc-500 flex items-center space-x-1.5 pt-1">
                 <Calendar className="w-3.5 h-3.5 text-zinc-600" />

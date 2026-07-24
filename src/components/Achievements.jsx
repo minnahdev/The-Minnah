@@ -7,14 +7,14 @@ const achievementsList = [
     icon: <Award className="w-5 h-5 text-accent" />,
     title: "NASA Space Apps Challenge 2025 Local Winner",
     role: "Team Member // CEAL Node",
-    desc: "Co-developed an interactive 3D climate and environmental telemetric mapping dashboard. Honored as the local winner for solving complex scientific visualization prompts."
+    desc: "Co-developed an interactive 2D climate and environmental telemetric city mapping dashboard. Honored as the local winner for solving complex scientific visualization prompts."
   },
-  {
-    icon: <Presentation className="w-5 h-5 text-accent" />,
-    title: "Technical Speaker & Workshop Instructor",
-    role: "CEAL TinkerHub Chapter",
-    desc: "Structured and delivered Python coding fundamentals and Git/GitHub workflow workshops to over 60+ junior engineering students, enhancing peer programming practices."
-  },
+  //{
+  //  icon: <Presentation className="w-5 h-5 text-accent" />,
+  //  title: "Technical Speaker & Workshop Instructor",
+  //  role: "CEAL TinkerHub Chapter",
+  //  desc: "Structured and delivered Python coding fundamentals and Git/GitHub workflow workshops to over 60+ junior engineering students, enhancing peer programming practices."
+  //},
   {
     icon: <Users className="w-5 h-5 text-accent" />,
     title: "Community Event Coordinator & Emcee",
@@ -60,7 +60,7 @@ export default function Achievements() {
               <h3 className="font-display font-bold text-white text-base md:text-lg">
                 {item.title}
               </h3>
-              
+
               <div className="font-mono text-[10px] text-accent uppercase tracking-wider">
                 {item.role}
               </div>
