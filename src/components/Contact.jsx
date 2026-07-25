@@ -42,7 +42,6 @@ export default function Contact() {
     message: ''
   });
   const [status, setStatus] = useState('idle'); // idle | sending | success | error
-  const [terminalOutput, setTerminalOutput] = useState([]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -65,14 +64,8 @@ export default function Contact() {
     if (serviceId && templateId && publicKey) {
       emailjs.sendForm(serviceId, templateId, formRef.current, publicKey)
         .then(() => {
-          startTerminalAnimation();
-
-          setFormData({
-            name: '',
-            email: '',
-            subject: '',
-            message: ''
-          });
+          setStatus('success');
+          setFormData({ name: '', email: '', subject: '', message: '' });
         })
         .catch((err) => {
           console.error("EmailJS Error: ", err);
@@ -87,7 +80,7 @@ export default function Contact() {
   };
 
   const runMailtoFallback = () => {
-
+    setStatus('success'); // show success interface
 
     // Prepare mailto link properties
     const subjectLine = encodeURIComponent(formData.subject || `Portfolio Contact from ${formData.name}`);
@@ -101,30 +94,6 @@ export default function Contact() {
 
     // Clear form fields
     setFormData({ name: '', email: '', subject: '', message: '' });
-  };
-
-  const startTerminalAnimation = () => {
-    setStatus("success");
-    setTerminalOutput([]);
-
-    const lines = [
-      "> Establishing secure connection...",
-      "[✓] Connection established",
-      "",
-      "> Encrypting payload...",
-      "[✓] Encryption complete",
-      "",
-      "> Uploading payload...",
-      "[✓] Payload delivered",
-      "",
-      "> Awaiting response..."
-    ];
-
-    lines.forEach((line, index) => {
-      setTimeout(() => {
-        setTerminalOutput((prev) => [...prev, line]);
-      }, index * 450);
-    });
   };
 
   return (
@@ -209,39 +178,47 @@ export default function Contact() {
         <div className="lg:col-span-7 bg-[#111113] border border-[#27272A] rounded-lg p-6 md:p-8">
           {status === 'success' ? (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="w-full"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4 }}
+              className="py-10 flex justify-center"
             >
-              <div className="bg-[#09090B] border border-accent/30 rounded-lg p-6 font-mono">
+              <div className="w-full max-w-xl rounded-lg border border-accent/30 bg-[#09090B] p-6">
 
-                <div className="text-accent text-sm mb-4">
-                  TERMINAL://SECURE_TRANSMISSION
-                </div>
+                <TypeAnimation
+                  sequence={[
+                    `////////////////////////////////////////////////
 
-                <div className="space-y-2 min-h-[260px]">
+                  TRANSMISSION STATUS
 
-                  {terminalOutput.map((line, index) => (
-                    <div
-                      key={index}
-                      className={line.startsWith("[✓]") ? "text-accent" : "text-zinc-300"}
-                    >
-                      {line}
-                    </div>
-                  ))}
+                  [✓] Encryption Complete
+                  [✓] Secure Tunnel Established
+                  [✓] Payload Delivered
 
-                  <div className="text-accent animate-pulse">
-                    █
-                  </div>
+                  Awaiting Response...
 
+                    ////////////////////////////////////////////////`
+                  ]}
+                  wrapper="pre"
+                  speed={80}
+                  cursor={true}
+                  className="font-mono text-sm leading-7 whitespace-pre-wrap text-zinc-300"
+                />
+
+                <div className="border-t border-zinc-800 mt-6 pt-6">
+                  <p className="text-white text-sm">
+                    Your message has been securely delivered.
+                  </p>
+
+                  <p className="text-zinc-500 text-sm mt-2">
+                    I'll review your enquiry and get back to you as soon as possible.
+                  </p>
                 </div>
 
                 <button
-                  onClick={() => {
-                    setStatus("idle");
-                    setTerminalOutput([]);
-                  }}
-                  className="mt-6 w-full border border-accent hover:bg-accent hover:text-black text-accent py-3 rounded font-mono transition-all">
+                  onClick={() => setStatus('idle')}
+                  className="mt-8 w-full border border-accent text-accent hover:bg-accent hover:text-black rounded-md py-3 font-mono uppercase tracking-widest transition-all duration-300"
+                >
                   NEW TRANSMISSION
                 </button>
 
