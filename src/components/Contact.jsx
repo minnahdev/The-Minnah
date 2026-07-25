@@ -87,7 +87,7 @@ export default function Contact() {
   };
 
   const runMailtoFallback = () => {
-    setStatus('success'); // show success interface
+
 
     // Prepare mailto link properties
     const subjectLine = encodeURIComponent(formData.subject || `Portfolio Contact from ${formData.name}`);
