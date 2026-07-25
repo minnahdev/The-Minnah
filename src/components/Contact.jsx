@@ -42,6 +42,7 @@ export default function Contact() {
     message: ''
   });
   const [status, setStatus] = useState('idle'); // idle | sending | success | error
+  const [terminalOutput, setTerminalOutput] = useState([]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -64,8 +65,14 @@ export default function Contact() {
     if (serviceId && templateId && publicKey) {
       emailjs.sendForm(serviceId, templateId, formRef.current, publicKey)
         .then(() => {
-          setStatus('success');
-          setFormData({ name: '', email: '', subject: '', message: '' });
+          startTerminalAnimation();
+
+          setFormData({
+            name: '',
+            email: '',
+            subject: '',
+            message: ''
+          });
         })
         .catch((err) => {
           console.error("EmailJS Error: ", err);
