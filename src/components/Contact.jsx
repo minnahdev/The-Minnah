@@ -198,7 +198,7 @@ export default function Contact() {
 
                   Awaiting Response...
 
-                  ////////////////////////////////////////////////`
+                    ////////////////////////////////////////////////`
                   ]}
                   wrapper="pre"
                   speed={80}
