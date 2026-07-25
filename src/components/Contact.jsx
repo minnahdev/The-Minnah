@@ -187,6 +187,7 @@ export default function Contact() {
 
                 <TypeAnimation
                   sequence={[
+
                     `////////////////////////////////////////////////
 
                   TRANSMISSION STATUS
@@ -197,7 +198,7 @@ export default function Contact() {
 
                   Awaiting Response...
 
-                    ////////////////////////////////////////////////`
+                  ////////////////////////////////////////////////`
                   ]}
                   wrapper="pre"
                   speed={80}
