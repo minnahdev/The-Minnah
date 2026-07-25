@@ -192,8 +192,11 @@ export default function Contact() {
 
                   TRANSMISSION STATUS
 
+                  > Establishing secure connection...
                   [✓] Encryption Complete
+                  > Encrypting payload...
                   [✓] Secure Tunnel Established
+                  > Uploading payload...
                   [✓] Payload Delivered
 
                   Awaiting Response...
@@ -201,11 +204,11 @@ export default function Contact() {
                     ////////////////////////////////////////////////`
                   ]}
                   wrapper="pre"
-                  speed={80}
+                  speed={75}
                   cursor={true}
                   className="font-mono text-sm leading-7 whitespace-pre-wrap text-zinc-300"
                 />
-
+                <span className="terminal-cursor">█</span>
                 <div className="border-t border-zinc-800 mt-6 pt-6">
                   <p className="text-white text-sm">
                     Your message has been securely delivered.

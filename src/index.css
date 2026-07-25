@@ -93,14 +93,22 @@ input::-webkit-inner-spin-button {
 
 
 /* Terminal typing cursor */
-.type-cursor {
+.terminal-cursor {
   color: #00FF88;
-  font-weight: bold;
-  animation: blinkCursor 1s steps(2, start) infinite;
+  font-size: 1rem;
+  font-weight: 900;
+  animation: blink 1s steps(2, start) infinite;
 }
 
-@keyframes blinkCursor {
+@keyframes blink {
   50% {
     opacity: 0;
   }
+}
+
+.react-type-animation-cursor {
+  font-weight: 900;
+  text-shadow:
+    0 0 1px #00FF88,
+    0 0 2px #00FF88;
 }
