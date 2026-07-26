@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { Compass, Globe, Radio } from 'lucide-react';
 
 const descriptors = [
-  "Developer", "Leader", "Teacher", "Learner",
-  "Coordinator", "Host", "Curious", "Dreamer", "Doer"
+  "SOFTWARE_ENGINEER", "MISSION_LEADER", "COMMUNITY_BUILDER", "PUBLIC_SPEAKER",
+  "TECH_EDUCATOR", "CURIOUS_MIND", "SYSTEM_DESIGNER", "PROBLEM_SOLVER", "CONTINUOUS_LEARNER"
 ];
 
 export default function Hero() {
@@ -19,7 +19,7 @@ export default function Hero() {
       >
         <span className="flex items-center space-x-1.5">
           <span className="w-2 h-2 rounded-full bg-accent animate-ping" />
-          <span className="text-white font-semibold uppercase">Live Session</span>
+          <span className="text-white font-semibold uppercase">DOSSIER ACCESSED</span>
         </span>
         <span className="w-[1px] h-3 bg-zinc-800" />
         <span className="flex items-center space-x-1">
