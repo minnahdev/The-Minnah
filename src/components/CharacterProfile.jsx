@@ -78,7 +78,7 @@ export default function CharacterProfile() {
               download
               className="text-accent hover:text-white transition-colors"
             >
-              {'> EXPORT_DOSSIER.PDF'}
+              {'↓ EXPORT_DOSSIER.PDF'}
             </a>
           </div>
         </motion.div>
