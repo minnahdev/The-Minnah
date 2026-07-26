@@ -86,7 +86,7 @@ export default function MissionLog() {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
 
               {/* Date Column (md:col-span-3) */}
-              <div className="md:col-span-3 md:-ml-36 font-mono text-xs text-zinc-500 flex items-center space-x-1.5 pt-1">
+              <div className="md:col-span-3 md:-ml-44 font-mono text-xs text-zinc-500 flex items-center space-x-1.5 pt-1">
                 <Calendar className="w-3.5 h-3.5 text-zinc-600" />
                 <span>{item.period}</span>
               </div>
