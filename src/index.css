@@ -12,7 +12,7 @@
     background-color: #09090B;
     color: #FFFFFF;
     font-family: 'Inter', sans-serif;
-    cursor: url("/cursor-green.svg") 3 2, auto;
+    cursor: none;
   }
 
   h1,
@@ -112,13 +112,4 @@ input::-webkit-inner-spin-button {
   text-shadow:
     0 0 1px #00FF88,
     0 0 2px #00FF88;
-}
-
-a,
-button,
-input,
-textarea,
-select,
-label {
-  cursor: url("/cursor-green.svg") 3 2, pointer;
 }
