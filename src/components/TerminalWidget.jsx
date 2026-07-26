@@ -43,7 +43,6 @@ export default function TerminalWidget({ isOpen, onClose }) {
           { type: 'output', text: '  linkedin   - Launch Minnah\'s LinkedIn in a new tab' },
           { type: 'output', text: '  contact    - Navigate to Contact Information' },
           { type: 'output', text: '  capabilities - Navigate to Capabilities' },
-          { type: 'output', text: '  communities - Navigate to Communities' },
           { type: 'output', text: '  clear      - Reset console history' }
         ]);
         break;
@@ -82,9 +81,8 @@ export default function TerminalWidget({ isOpen, onClose }) {
         setTimeout(() => scrollToSection('capabilities'), 300);
         break;
 
-      case 'communities':
-        setHistory([...newHistory, { type: 'output', text: 'Navigating to Communities...' }]);
-        setTimeout(() => scrollToSection('communities'), 300);
+      case 'hey', 'hello', 'yo', 'hi':
+        setHistory([...newHistory, { type: 'output', text: 'Hello there! Nice to Meet You, check "help" command to navigate through the Dossier' }]);
         break;
 
       case 'coffee':
