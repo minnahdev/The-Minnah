@@ -48,7 +48,18 @@ export default function BackgroundGrid() {
       <div className="absolute inset-0 scanlines-overlay opacity-40" />
 
       {/* Subtle radial ambient dark green glow in the center */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,136,0.02),transparent_70%)]" />
+      <motion.div
+        animate={{
+          opacity: [0.4, 0.8, 0.4],
+          scale: [1, 1.08, 1],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,136,0.03),transparent_70%)]"
+      />
     </div>
   );
 }
