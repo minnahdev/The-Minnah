@@ -70,9 +70,17 @@ export default function CharacterProfile() {
             </div>
           </div>
 
-          <div className="mt-8 pt-4 border-t border-zinc-900 text-xs font-mono text-zinc-500 flex justify-between">
+          <div className="mt-8 pt-4 border-t border-zinc-900 text-xs font-mono text-zinc-500 flex justify-between items-center">
             <span>REGIONAL_SECTOR: SOUTH_INDIA</span>
-            <span>CLEARANCE: LEVEL_5</span>
+
+            <a
+              href="/documents/Minnah_Pattar_Kadavan_Resume.pdf"
+              download
+              className="group flex items-center gap-2 text-accent hover:text-white transition-all duration-300 uppercase"
+            >
+              <Download size={14} className="group-hover:translate-y-0.5 transition-transform duration-300" />
+              <span>DOWNLOAD DOSSIER</span>
+            </a>
           </div>
         </motion.div>
 
