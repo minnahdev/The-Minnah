@@ -118,9 +118,7 @@ export default function Hero() {
         <p>
           Personnel file unlocked.
           <br /><br />
-          Minnah Pattar Kadavan is a Computer Science & Engineering student, software
-          engineer, community builder, public speaker and technical educator currently
-          operating from Kerala, India.
+          Minnah Pattar Kadavan is a Computer Science & Engineering student, software engineer, community builder, public speaker and technical educator currently operating from Kerala, India.
           <br /><br />
           Primary objectives include building scalable software, leading engineering
           communities, mentoring aspiring developers and creating products that solve
