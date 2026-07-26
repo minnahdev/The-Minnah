@@ -74,7 +74,7 @@ export default function CharacterProfile() {
             <span>REGIONAL_SECTOR: SOUTH_INDIA</span>
 
             <a
-              href="/documents/Minnah_Pattar_Kadavan_Resume.pdf"
+              href="\public\documents\Minnah_Pattar_Kadavan_Resume.pdf"
               download
               className="text-accent hover:text-white transition-colors"
             >
