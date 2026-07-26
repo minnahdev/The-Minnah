@@ -76,10 +76,9 @@ export default function CharacterProfile() {
             <a
               href="/documents/Minnah_Pattar_Kadavan_Resume.pdf"
               download
-              className="group flex items-center gap-2 text-accent hover:text-white transition-all duration-300 uppercase"
+              className="text-accent hover:text-white transition-colors"
             >
-              <Download size={14} className="group-hover:translate-y-0.5 transition-transform duration-300" />
-              <span>DOWNLOAD DOSSIER</span>
+              {'> EXPORT_DOSSIER.PDF'}
             </a>
           </div>
         </motion.div>
