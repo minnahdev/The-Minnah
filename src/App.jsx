@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Cursor from "./components/Cursor";
 
 // Component Imports
 import BootLoader from './components/BootLoader';
@@ -42,15 +43,16 @@ export default function App() {
 
             {/* Content Foreground */}
             <div className="relative z-10 flex flex-col min-h-screen">
-              
+
               {/* Navigation Header */}
-              <Navbar 
-                onTerminalToggle={() => setIsTerminalOpen(prev => !prev)} 
-                isTerminalOpen={isTerminalOpen} 
+              <Navbar
+                onTerminalToggle={() => setIsTerminalOpen(prev => !prev)}
+                isTerminalOpen={isTerminalOpen}
               />
 
               {/* Main Content Sections */}
               <main className="flex-grow space-y-4 pb-24">
+                <Cursor />
                 <Hero />
                 <CharacterProfile />
                 <Capabilities />
@@ -71,9 +73,9 @@ export default function App() {
               </footer>
 
               {/* Interactive Terminal CLI Widget */}
-              <TerminalWidget 
-                isOpen={isTerminalOpen} 
-                onClose={() => setIsTerminalOpen(false)} 
+              <TerminalWidget
+                isOpen={isTerminalOpen}
+                onClose={() => setIsTerminalOpen(false)}
               />
 
             </div>
