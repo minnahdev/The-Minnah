@@ -35,7 +35,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #09090B;
+  background: #010121;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -102,7 +102,7 @@ input::-webkit-inner-spin-button {
 
 @keyframes blink {
   50% {
-    opacity: 100;
+    opacity: 0;
   }
 }
 

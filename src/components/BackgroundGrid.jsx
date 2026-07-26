@@ -16,11 +16,11 @@ export default function BackgroundGrid() {
       const { innerWidth, innerHeight } = window;
       const centerX = innerWidth / 2;
       const centerY = innerHeight / 2;
-      
+
       // Max displacement is 20px
       const deltaX = ((e.clientX - centerX) / centerX) * 15;
       const deltaY = ((e.clientY - centerY) / centerY) * 15;
-      
+
       mouseX.set(deltaX);
       mouseY.set(deltaY);
     };
@@ -34,7 +34,7 @@ export default function BackgroundGrid() {
   return (
     <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none bg-[#09090B]">
       {/* Parallax Container */}
-      <motion.div 
+      <motion.div
         style={{
           x: translateX,
           y: translateY,
@@ -42,13 +42,44 @@ export default function BackgroundGrid() {
         }}
         className="absolute -inset-10 bg-grid-subtle"
       />
-      
+      {packets.map((_, i) => (
+        <motion.div
+          key={i}
+          className="absolute w-1 h-1 bg-accent rounded-sm opacity-40"
+          initial={{
+            x: -50,
+            y: Math.random() * window.innerHeight,
+          }}
+          animate={{
+            x: window.innerWidth + 50,
+          }}
+          transition={{
+            duration: 15 + Math.random() * 15,
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "linear",
+            delay: Math.random() * 10,
+          }}
+        />
+      ))}
+
       {/* Non-moving overlay layers (Noise and Scanlines) */}
       <div className="absolute inset-0 noise-overlay opacity-60" />
       <div className="absolute inset-0 scanlines-overlay opacity-40" />
-      
+
       {/* Subtle radial ambient dark green glow in the center */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,136,0.02),transparent_70%)]" />
+      <motion.div
+        animate={{
+          opacity: [0.4, 0.8, 0.4],
+          scale: [1, 1.08, 1],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,136,0.03),transparent_70%)]"
+      />
     </div>
   );
 }
