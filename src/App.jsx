@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Cursor from "./components/Cursor";
 
 // Component Imports
 import BootLoader from './components/BootLoader';
@@ -51,7 +50,6 @@ export default function App() {
               />
               {/* Main Content Sections */}
               <main className="flex-grow space-y-4 pb-24">
-                <Cursor />
                 <Hero />
                 <CharacterProfile />
                 <Capabilities />
