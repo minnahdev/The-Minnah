@@ -55,7 +55,7 @@ export default function Navbar({ onTerminalToggle, isTerminalOpen }) {
     <nav className="sticky top-0 z-40 w-full border-b border-border bg-background/80 backdrop-blur-md font-mono text-sm">
       <div className="max-w-7xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
         {/* Brand / Logo */}
-        <div className="flex items-center space-x-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+        <div className="flex items-center space-x-3 cursor-pointer     " onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <Shield className="w-5 h-5 text-accent text-glow-accent" />
           <span className="font-display font-bold tracking-tight text-white select-none">
             MINNAH <span className="text-accent">PATTAR KADAVAN</span>
@@ -68,9 +68,8 @@ export default function Navbar({ onTerminalToggle, isTerminalOpen }) {
             <button
               key={item.id}
               onClick={() => handleNavClick(item.id)}
-              className={`relative px-3 py-2 transition-colors duration-200 hover:text-white ${
-                activeSection === item.id ? 'text-accent' : 'text-zinc-400'
-              }`}
+              className={`relative px-3 py-2 transition-colors duration-200 hover:text-white ${activeSection === item.id ? 'text-accent' : 'text-zinc-400'
+                }`}
             >
               {item.label}
               {activeSection === item.id && (
@@ -82,11 +81,10 @@ export default function Navbar({ onTerminalToggle, isTerminalOpen }) {
           {/* Terminal Toggle Button */}
           <button
             onClick={onTerminalToggle}
-            className={`flex items-center space-x-2 border px-3 py-1.5 rounded transition-all duration-200 ${
-              isTerminalOpen 
-                ? 'bg-accent/10 border-accent text-accent border-glow-accent' 
+            className={`flex items-center space-x-2 border px-3 py-1.5 rounded transition-all duration-200 ${isTerminalOpen
+                ? 'bg-accent/10 border-accent text-accent border-glow-accent'
                 : 'border-zinc-800 text-zinc-400 hover:border-accent hover:text-accent'
-            }`}
+              }`}
           >
             <Terminal className="w-4 h-4" />
             <span className="text-xs uppercase">Terminal</span>
@@ -97,13 +95,12 @@ export default function Navbar({ onTerminalToggle, isTerminalOpen }) {
         <div className="flex md:hidden items-center space-x-3">
           <button
             onClick={onTerminalToggle}
-            className={`p-2 border rounded ${
-              isTerminalOpen ? 'border-accent text-accent' : 'border-zinc-800 text-zinc-400'
-            }`}
+            className={`p-2 border rounded ${isTerminalOpen ? 'border-accent text-accent' : 'border-zinc-800 text-zinc-400'
+              }`}
           >
             <Terminal className="w-4 h-4" />
           </button>
-          
+
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-2 text-zinc-400 hover:text-white"
@@ -120,9 +117,8 @@ export default function Navbar({ onTerminalToggle, isTerminalOpen }) {
             <button
               key={item.id}
               onClick={() => handleNavClick(item.id)}
-              className={`block w-full text-left px-3 py-2 rounded transition-colors ${
-                activeSection === item.id ? 'bg-accent/10 text-accent font-bold' : 'text-zinc-400 hover:text-white'
-              }`}
+              className={`block w-full text-left px-3 py-2 rounded transition-colors ${activeSection === item.id ? 'bg-accent/10 text-accent font-bold' : 'text-zinc-400 hover:text-white'
+                }`}
             >
               {item.label}
             </button>

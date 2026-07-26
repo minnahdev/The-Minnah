@@ -119,6 +119,9 @@ button,
 input,
 textarea,
 select,
-label {
-  cursor: url("/cursor-green.svg") 3 2, pointer;
+label,
+summary,
+details,
+[role="button"] {
+  cursor: url("/cursor-green.svg") 3 2, auto !important;
 }
