@@ -1,11 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Compass, Globe, Radio } from 'lucide-react';
-
-const descriptors = [
-  "SOFTWARE_ENGINEER", "MISSION_LEADER", "COMMUNITY_BUILDER", "PUBLIC_SPEAKER",
-  "TECH_EDUCATOR", "CURIOUS_MIND", "SYSTEM_DESIGNER", "PROBLEM_SOLVER", "CONTINUOUS_LEARNER"
-];
+import { TypeAnimation } from "react-type-animation";
 
 export default function Hero() {
   return (
@@ -44,22 +40,72 @@ export default function Hero() {
       </motion.h1>
 
       {/* Descriptors list */}
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.4 }}
-        className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2 max-w-3xl font-mono text-xs md:text-sm text-accent mb-10"
+        className="mb-10"
       >
-        {descriptors.map((desc, idx) => (
-          <React.Fragment key={desc}>
-            <span className="hover:text-white transition-colors duration-200 cursor-default uppercase tracking-wider font-semibold">
-              {desc}
-            </span>
-            {idx < descriptors.length - 1 && (
-              <span className="text-zinc-700 font-bold select-none">•</span>
-            )}
-          </React.Fragment>
-        ))}
+        <div className="font-mono text-lg md:text-2xl text-accent tracking-wider">
+          <span>&gt; </span>
+
+          <TypeAnimation
+            sequence={[
+              "SOFTWARE_ENGINEER",
+              1800,
+
+              "",
+              400,
+
+              "MISSION_LEADER",
+              1800,
+
+              "",
+              400,
+
+              "COMMUNITY_BUILDER",
+              1800,
+
+              "",
+              400,
+
+              "PUBLIC_SPEAKER",
+              1800,
+
+              "",
+              400,
+
+              "TECH_EDUCATOR",
+              1800,
+
+              "",
+              400,
+
+              "SYSTEM_DESIGNER",
+              1800,
+
+              "",
+              400,
+
+              "PROBLEM_SOLVER",
+              1800,
+
+              "",
+              400,
+
+              "CONTINUOUS_LEARNER",
+              1800,
+
+              "",
+              400,
+            ]}
+            speed={45}
+            deletionSpeed={25}
+            repeat={Infinity}
+            cursor={true}
+          />
+        </div>
       </motion.div>
 
       {/* Human-written Introduction paragraph */}
@@ -72,8 +118,8 @@ export default function Hero() {
         <p>
           Personnel file unlocked.
           <br /><br />
-          Minnah Pattar Kadavan is a Computer Science & Engineering student,
-          software developer, community leader and technical educator currently
+          Minnah Pattar Kadavan is a Computer Science & Engineering student, software
+          engineer, community builder, public speaker and technical educator currently
           operating from Kerala, India.
           <br /><br />
           Primary objectives include building scalable software, leading engineering
