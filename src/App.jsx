@@ -49,7 +49,6 @@ export default function App() {
                 onTerminalToggle={() => setIsTerminalOpen(prev => !prev)}
                 isTerminalOpen={isTerminalOpen}
               />
-
               {/* Main Content Sections */}
               <main className="flex-grow space-y-4 pb-24">
                 <Cursor />
