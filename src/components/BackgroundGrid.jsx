@@ -42,26 +42,6 @@ export default function BackgroundGrid() {
         }}
         className="absolute -inset-10 bg-grid-subtle"
       />
-      {packets.map((_, i) => (
-        <motion.div
-          key={i}
-          className="absolute w-1 h-1 bg-accent rounded-sm opacity-40"
-          initial={{
-            x: -50,
-            y: Math.random() * window.innerHeight,
-          }}
-          animate={{
-            x: window.innerWidth + 50,
-          }}
-          transition={{
-            duration: 15 + Math.random() * 15,
-            repeat: Infinity,
-            repeatType: "loop",
-            ease: "linear",
-            delay: Math.random() * 10,
-          }}
-        />
-      ))}
 
       {/* Non-moving overlay layers (Noise and Scanlines) */}
       <div className="absolute inset-0 noise-overlay opacity-60" />
