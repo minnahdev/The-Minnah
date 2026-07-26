@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Compass, Globe, Radio } from 'lucide-react';
 
 const descriptors = [
-  "Developer", "Leader", "Teacher", "Learner", 
+  "Developer", "Leader", "Teacher", "Learner",
   "Coordinator", "Host", "Curious", "Dreamer", "Doer"
 ];
 
@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section className="relative pt-20 pb-12 flex flex-col items-center justify-center text-center px-4 max-w-5xl mx-auto">
       {/* Dossier Header Details */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 0.6, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -34,7 +34,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Main Identity Heading */}
-      <motion.h1 
+      <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
@@ -44,7 +44,7 @@ export default function Hero() {
       </motion.h1>
 
       {/* Descriptors list */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.4 }}
@@ -63,17 +63,25 @@ export default function Hero() {
       </motion.div>
 
       {/* Human-written Introduction paragraph */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.5 }}
         className="max-w-2xl text-zinc-400 text-base md:text-lg leading-relaxed font-sans"
       >
         <p>
-          I am a Computer Science & Engineering student at the College of Engineering Attingal (CEAL), 
-          with a drive to build robust software systems and support tech communities. I write code, 
-          lead technical and social organizations, direct events, teach others, and love solving tough problems. 
-          For me, technology is a tool to create practical solutions that make a visible impact on the community.
+          Personnel file unlocked.
+          <br /><br />
+          Minnah Pattar Kadavan is a Computer Science & Engineering student,
+          software developer, community leader and technical educator currently
+          operating from Kerala, India.
+          <br /><br />
+          Primary objectives include building scalable software, leading engineering
+          communities, mentoring aspiring developers and creating products that solve
+          practical problems.
+          <br /><br />
+          Current status: Available for ambitious projects and meaningful
+          collaborations.
         </p>
       </motion.div>
 
