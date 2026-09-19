@@ -94,14 +94,3 @@ We researched dashboard layouts and typography systems that feel premium and tim
 ### Testing Performed
 - **Production Build Check**: Verified that Vite compiles all assets into a single static build.
 - **Responsive Layout**: Verified columns stack fluidly on mobile breakpoints.
-
----
-
-## 9. Deployment Process
-
-### Build & Deploy
-Compile the assets:
-```bash
-npm run build
-```
-Upload the `dist/` directory to Vercel, Netlify, or configure GitHub Pages.
